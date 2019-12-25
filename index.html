@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap&subset=latin-ext" rel="stylesheet">
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+              crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="webfonts/all.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<aside class="menu-right">
+        <i class="fas fa-eye-slash menu-right__hide active"></i>
+        <i class="far fa-eye menu-right__show"></i>
+    <nav class="nav-right">
+        <img src="img/Sun.png" class="nav-right__go-to" alt="Sun">
+        <img src="img/Mercury.jpg" class="nav-right__go-to" alt="Mercury">
+        <img src="img/Venus.jpg" class="nav-right__go-to" alt="Venus">
+        <img src="img/Earth.jpg" class="nav-right__go-to" alt="Earth">
+        <img src="img/Mars.jpg" class="nav-right__go-to" alt="Mars">
+        <img src="img/Jupiter.jpg" class="nav-right__go-to" alt="Jupiter">
+        <img src="img/Saturn.jpg" class="nav-right__go-to" alt="Saturn">
+        <img src="img/Uranus.jpg" class="nav-right__go-to" alt="Uranus">
+        <img src="img/Neptune.jpg" class="nav-right__go-to" alt="Neptune">
+        <img src="img/Pluto.png" class="nav-right__go-to" alt="Pluto">
+        <div class="nav-right__lightspeed-btn">
+            <img src="img/Light.png" alt="Light">
+        </div>
+    </nav>
+</aside>
+
+<div class="lightspeed-msg">Kliknij w dowolnym miejscu</div>
+<div class="lightbeam"></div>
+
+<div class="wraper">
+    <header class="welcome-header">
+        <h1 class="welcome-header__title"> Model Układu Słonecznego </h1>
+        <p class="welcome-header__text">Większość (jeśli nie wszystkie) modele Układu Słonecznego jakie do tej pory widziałeś/aś są błędne.
+            Brakuje im odpowiedniej skali. Zazwyczaj błędne są odległości pomiędzy planetami i ich odległości od Słońca
+            oraz stosunki wielkości planet względem siebie i względem Słońca.</p>
+        <p class="welcome-header__text">W naszej skali Księżyc będzie wyglądał tak:</p>
+        <div class="welcome-header__moon"></div>
+        <img src="img/arrow.png" class="welcome-header__arrow" alt="">
+        <span class="welcome-header__moontxt">Księżyc</span>
+        <p class="welcome-header__text2">Księżyc ma tutaj wielkość (średnicę) 1 piksela. Jego średnica w rzeczywistości to 3.474km.
+            <br>
+            Kliknij, aby przejść dalej.
+        </p>
+        <div class="welcome-header__button">
+            <i class="fas fa-chevron-right welcome-header__button-arrow1"></i>
+            <i class="fas fa-chevron-right welcome-header__button-arrow2"></i>
+        </div>
+        
+    </header>
+
+    <span class="scale-label">SKALA</span>
+    <div class="show-scale">
+        <span class="km-100000 distance_label">100.000km</span>
+        <span class="km-1mln distance_label">1.000.000km</span>
+    </div>
+    
+    <div class="scale"></div>
+
+    <div class="distance-counter">
+    <img src="img/traveler.png" class="distance-counter__traveler">
+    <div class="distance-counter__distance"> 100.000km </div>
+    </div>
+    <ul class="units-choice">
+        <li class="units-choice__km unit">km</li>
+        <li class="units-choice__px unit">px</li>
+        <li class="units-choice__lm unit">au</li>
+        <li class="units-choice__au unit">lm</li>
+    </ul>
+
+    <div class="travel-from-sun">
+
+            <div class="travel-from-sun__sun planet"></div>
+
+            <div class="travel-from-sun__mercury planet">
+                <img src="img/arrow.png" class="travel-from-sun__mercury-arrow arrows" alt="">
+                <span class="travel-from-sun__mercury-name planets_names">MERKURY</span>
+                <div class="travel-from-sun__planet-info">
+                    <p>Typ: Planeta skalista</p>
+                    <p>Masa: 0.055 M⊕</p>
+                    <p>Gęstość: 5.427 kg/m3</p>
+                    <p>Promień: 2439.7 km</p>
+                    <p>Średnica: 4879.4 km</p>
+                    <p>Obwód: 15.329 km</p>
+                    <p>Okres obrotu: 58dni 15h</p>
+                    <p>Okres orbitalny: 87 dni</p>
+                </div>
+            </div>
+            <div class="travel-from-sun__venus planet">
+                <img src="img/arrow.png" class="travel-from-sun__venus-arrow arrows" alt="">
+                <span class="travel-from-sun__venus-name planets_names">WENUS</span>
+                <div class="travel-from-sun__planet-info">
+                    <p>Typ: Planeta skalista</p>
+                    <p>Masa: 0.81 M⊕</p>
+                    <p>Gęstość: 5.243 kg/m3</p>
+                    <p>Promień: 6051.8 km</p>
+                    <p>Średnica: 12103.6 km</p>
+                    <p>Obwód: 38.025 km</p>
+                    <p>Okres obrotu: 243 dni</p>
+                    <p>Okres orbitalny: 224 dni</p>
+                </div>
+            </div>
+            <div class="travel-from-sun__earth planet">
+                <img src="img/arrow.png" class="travel-from-sun__earth-arrow arrows" alt="">
+                <span class="travel-from-sun__earth-name planets_names">ZIEMIA</span>
+                <div class="travel-from-sun__planet-info">
+                    <p>Typ: Planeta skalista</p>
+                    <p>Masa: 5.97219×10^24 kg</p>
+                    <p>Gęstość: 5.513 kg/m3</p>
+                    <p>Promień: 6378.137 km</p>
+                    <p>Średnica: 12756.274 km</p>
+                    <p>Obwód: 40.075 km</p>
+                    <p>Okres obrotu: 24h</p>
+                    <p>Okres orbitalny: 365 dni</p>
+                </div>
+                <div class="travel-from-sun__moon moons">
+                    <img src="img/arrow.png" class="travel-from-sun__moon-arrow arrows" alt="">
+                    <span class="travel-from-sun__moon-name moons_names">KSIĘŻYC</span>
+                </div>
+            </div>
+            <div class="travel-from-sun__mars planet">
+                <img src="img/arrow.png" class="travel-from-sun__mars-arrow arrows" alt="">
+                <span class="travel-from-sun__mars-name planets_names">MARS</span>
+                <div class="travel-from-sun__planet-info">
+                    <p>Typ: Planeta skalista</p>
+                    <p>Masa: 0.107 M⊕</p>
+                    <p>Gęstość: 3.933 kg/m</p>
+                    <p>Promień: 3396.2 km</p>
+                    <p>Średnica: 6792.4 km</p>
+                    <p>Obwód: 21.344km</p>
+                    <p>Okres obrotu: 24h 37min</p>
+                    <p>Okres orbitalny: 686 dni</p>
+                </div>
+            </div>
+            <div class="travel-from-sun__jupiter planet">
+                <img src="img/arrow.png" class="travel-from-sun__jupiter-arrow arrows" alt="">
+                <span class="travel-from-sun__jupiter-name planets_names">JOWISZ</span>
+                <div class="travel-from-sun__planet-info">
+                    <p>Typ: Gazowy olbrzym</p>
+                    <p>Masa: 317.83 M⊕</p>
+                    <p>Gęstość: 1326 kg/m3</p>
+                    <p>Promień: 69.911 km</p>
+                    <p>Średnica: 139.822 km</p>
+                    <p>Obwód: 439.264 km</p>
+                    <p>Okres obrotu: 9h 55min</p>
+                    <p>Okres orbitalny: 11.8 roku</p>
+                </div>
+                <div class="travel-from-sun__ganymede moons">
+                    <img src="img/arrow.png" class="travel-from-sun__ganymede-arrow arrows" alt="">
+                    <span class="travel-from-sun__ganymede-name moons_names">GANIMEDES</span>
+                </div>
+                <div class="travel-from-sun__callisto moons">
+                    <img src="img/arrow.png" class="travel-from-sun__callisto-arrow arrows" alt="">
+                    <span class="travel-from-sun__callisto-name moons_names">KALLISTO</span>
+                </div>
+                <div class="travel-from-sun__io moons">
+                    <img src="img/arrow.png" class="travel-from-sun__io-arrow arrows" alt="">
+                    <span class="travel-from-sun__io-name moons_names">IO</span>
+                </div>
+            </div>
+            <div class="travel-from-sun__saturn planet">
+                <img src="img/saturn.svg" alt="">
+                <img src="img/arrow.png" class="travel-from-sun__saturn-arrow arrows" alt="">
+                <span class="travel-from-sun__saturn-name planets_names">SATURN</span>
+                <div class="travel-from-sun__planet-info">
+                    <p>Typ: Gazowy olbrzym</p>
+                    <p>Masa: 95.16 M⊕</p>
+                    <p>Gęstość: 687 kg/m3</p>
+                    <p>Promień: 58.232 km</p>
+                    <p>Średnica: 116.464 km</p>
+                    <p>Obwód: 378.675 km</p>
+                    <p>Okres obrotu: 10h 14min</p>
+                    <p>Okres orbitalny: 29.5 roku</p>
+                </div>
+                <div class="travel-from-sun__titan moons">
+                    <img src="img/arrow.png" class="travel-from-sun__titan-arrow arrows" alt="">
+                    <span class="travel-from-sun__titan-name moons_names">TYTAN</span>
+                </div>
+            </div>
+            <div class="travel-from-sun__uranus planet">
+                <img src="img/arrow.png" class="travel-from-sun__uranus-arrow arrows" alt="">
+                <span class="travel-from-sun__uranus-name planets_names">URAN</span>
+                <div class="travel-from-sun__planet-info">
+                    <p>Typ: Lodowy olbrzym</p>
+                    <p>Masa: 14.54 M⊕</p>
+                    <p>Gęstość: 1271 kg/m3</p>
+                    <p>Promień: 25.362 km</p>
+                    <p>Średnica: 50.724 km</p>
+                    <p>Obwód: 160.590 km</p>
+                    <p>Okres obrotu: 17h</p>
+                    <p>Okres orbitalny: 84 lata</p>
+                </div>
+            </div>
+            <div class="travel-from-sun__neptune planet">
+                <img src="img/arrow.png" class="travel-from-sun__neptune-arrow arrows" alt="">
+                <span class="travel-from-sun__neptune-name planets_names">NEPTUN</span>
+                <div class="travel-from-sun__planet-info">
+                    <p>Typ: Gazowy olbrzym</p>
+                    <p>Masa: 17.15 M⊕</p>
+                    <p>Gęstość: 1638 kg/m3</p>
+                    <p>Promień: 24.622 km</p>
+                    <p>Średnica: 49.244 km</p>
+                    <p>Obwód: 155.600 km</p>
+                    <p>Okres obrotu: 16h</p>
+                    <p>Okres orbitalny: 164 lata</p>
+                </div>
+                <div class="travel-from-sun__triton moons">
+                    <img src="img/arrow.png" class="travel-from-sun__triton-arrow arrows" alt="">
+                    <span class="travel-from-sun__triton-name moons_names">TRYTON</span>
+                </div>
+            </div>
+            <div class="travel-from-sun__pluto planet">
+                <img src="img/arrow.png" class="travel-from-sun__pluto-arrow arrows" alt="">
+                <span class="travel-from-sun__pluto-name planets_names">PLUTON</span>
+                <div class="travel-from-sun__planet-info">
+                    <p>Typ: Planeta karłowata</p>
+                    <p>Masa: 0.00258 M⊕</p>
+                    <p>Gęstość: 2.000 kg/m3</p>
+                    <p>Promień: 1.685 km</p>
+                    <p>Średnica: 2.370 km</p>
+                    <p>Obwód: 7.232 km</p>
+                    <p>Okres obrotu: 6 dni</p>
+                    <p>Okres orbitalny: 247 lat</p>
+                </div>
+            </div>
+    </div>
+
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
