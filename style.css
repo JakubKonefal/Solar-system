@@ -1,754 +1,778 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    font-family: 'Kanit', sans-serif;
-    height: 966px;
-    width: 1701300px;
-    overflow-y: hidden;
-    background-color: #00000d;
-    position: relative;
+body {
+  font-family: 'Kanit', sans-serif;
+  height: 966px;
+  width: 1701300px;
+  overflow-y: hidden;
+  background-color: #00000d;
+  position: relative;
 }
 
-.wraper{
-    width: 100%;
-    height: 100%;
-    background-color: #00000d;
-    position: relative;
-    
+.mobile-msg {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 2em;
+  background-color: #22222f;
+  z-index: 10000;
 }
 
-.welcome-header{
-    position: absolute;
-    width: 50vw;
-    height: 85vh;
-    top: 10vh;
-    left: 25vw;
-    text-align: center;
-    color: white;
+.mobile-msg__content {
+  text-align: center;
 }
 
-.welcome-header__title{
-    font-size: 40px;
-    margin-top: 10px;
-    margin-bottom: 30px;
+.wraper {
+  width: 100%;
+  height: 100%;
+  background-color: #00000d;
+  position: relative;
 }
 
-.welcome-header__text{
-    font-size: 20px;
+.welcome-header {
+  position: absolute;
+  width: 50vw;
+  height: 85vh;
+  top: 10vh;
+  left: 25vw;
+  text-align: center;
+  color: white;
 }
 
-.welcome-header__moon{
-    position: absolute;
-    top: 36%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1px;
-    height: 1px;
-    background-color: #fff;
+.welcome-header__title {
+  font-size: 40px;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
-.welcome-header__arrow{
-    position: absolute;
-    top: 35%;
-    left: 44%;
-    transform: rotate(50deg);
+.welcome-header__text {
+  font-size: 20px;
 }
 
-.welcome-header__moontxt{
-    position: absolute;
-    left: 33%;
-    top: 48%;
-    font-size: 28px;
-    text-transform: uppercase;
+.welcome-header__moon {
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1px;
+  height: 1px;
+  background-color: #fff;
 }
 
-.welcome-header__text2{
-    position: absolute;
-    font-size: 20px;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.welcome-header__arrow {
+  position: absolute;
+  top: 35%;
+  left: 44%;
+  transform: rotate(50deg);
 }
 
-.welcome-header__button{
-    position: absolute;
-    top: 83%;
-    left: 50%;
-    width: 15%;
-    height: 50px;
-    transform: translate(-50%, -50%);
-    font-size: 50px;
-    color: #144006;
-    overflow-x: hidden;
-    cursor: pointer;
+.welcome-header__moontxt {
+  position: absolute;
+  left: 33%;
+  top: 48%;
+  font-size: 28px;
+  text-transform: uppercase;
 }
 
-.welcome-header__button-arrow1{
-    position: absolute;
+.welcome-header__text2 {
+  position: absolute;
+  font-size: 20px;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.welcome-header__button {
+  position: absolute;
+  top: 83%;
+  left: 50%;
+  width: 15%;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: #144006;
+  overflow-x: hidden;
+  cursor: pointer;
+}
+
+.welcome-header__button-arrow1 {
+  position: absolute;
+  left: -15%;
+  top: 0;
+  animation: goRight1 2s infinite both ease;
+}
+
+.welcome-header__button-arrow2 {
+  position: absolute;
+  left: -15%;
+  top: 0;
+  animation: goRight2 2s 0.2s infinite both ease;
+}
+
+.scale {
+  position: absolute;
+  left: 2995px;
+  bottom: 40px;
+  width: 1701300px;
+  height: 28px;
+  background-image: url('img/scale.png');
+  background-repeat: repeat-x;
+}
+
+.scale-label {
+  position: absolute;
+  left: 2000px;
+  top: 20%;
+  width: 400px;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.show-scale {
+  position: absolute;
+  left: 2000px;
+  top: 50%;
+  width: 400px;
+  height: 380px;
+  transform: translateY(-50%);
+  background-image: url('img/scalebefore.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  border-bottom: 2px dashed white;
+  border-top: 2px dashed white;
+}
+
+.distance_label {
+  position: absolute;
+  font-size: 22px;
+  color: white;
+}
+
+.km-100000 {
+  top: 57%;
+  left: 10%;
+}
+
+.km-1mln {
+  top: 62%;
+  right: 0;
+}
+
+.menu-right {
+  position: fixed;
+  width: 50px;
+  height: 65vh;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  z-index: 2;
+  text-align: center;
+}
+
+.menu-right__hide {
+  position: absolute;
+  top: -10%;
+  right: 12px;
+  color: white;
+  font-size: 20px;
+  display: none;
+  cursor: pointer;
+}
+
+.menu-right__show {
+  position: absolute;
+  top: -10%;
+  right: 12px;
+  color: white;
+  font-size: 20px;
+  display: none;
+  cursor: pointer;
+}
+
+.nav-right {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #00000d;
+  animation: showMenuRight 0.5s linear 1 alternate forwards;
+}
+
+.nav-right__go-to:hover {
+  cursor: pointer;
+  transform: scale(1.25);
+}
+
+.nav-right__lightspeed-btn {
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-right__lightspeed-btn::after {
+  position: absolute;
+  left: -130px;
+  top: 25%;
+  content: 'Prędkość światła';
+  color: transparent;
+  transition: 0.25s;
+}
+
+.nav-right__lightspeed-btn:hover::after {
+  color: white;
+}
+
+.lightbeam {
+  position: absolute;
+  top: 50%;
+  left: 200px;
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  border-radius: 30%;
+  transform: translate(-50%, -50%);
+  border-left: 1px solid #00000d;
+  overflow-x: hidden;
+  cursor: pointer;
+}
+
+.lightbeam:hover {
+  background-color: red;
+}
+
+.lightspeed-msg {
+  position: fixed;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 26px;
+  z-index: 2;
+  display: none;
+}
+
+.travel-from-sun {
+  position: absolute;
+  left: 2800px;
+  top: 0;
+  height: 100%;
+  width: 1701300px;
+}
+
+.travel-from-sun__planet-info {
+  position: absolute;
+  left: 300px;
+  top: 50%;
+  width: 200px;
+  height: 255px;
+  border: 3px solid #ccc;
+  border-radius: 20px;
+  background-color: #031c33;
+  color: white;
+  text-align: justify;
+  padding: 20px 10px;
+  display: none;
+}
+
+.travel-from-sun__planet-info > p {
+  padding: 4px;
+}
+
+.distance-counter {
+  position: fixed;
+  bottom: 15%;
+  left: 50%;
+  width: 100px;
+  height: 60px;
+  transform: translateX(-50%);
+  display: none;
+  z-index: 1;
+  color: #ccc;
+}
+
+.distance-counter:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.distance-counter__traveler {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.distance-counter__distance {
+  position: absolute;
+  bottom: 18%;
+  left: 54%;
+  width: 100px;
+  height: 40px;
+  transform: translateX(-50%);
+  font-size: 18px;
+  text-align: center;
+}
+
+.units-choice {
+  position: fixed;
+  bottom: 10.3%;
+  left: 54%;
+  font-size: 14px;
+  color: white;
+  list-style: none;
+  display: none;
+  z-index: 2;
+}
+
+.unit {
+  border: 1px solid white;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.unit:hover {
+  background-color: #11111c;
+  cursor: pointer;
+}
+
+.planet {
+  position: absolute;
+}
+
+.arrows {
+  position: absolute;
+  transform: rotate(-35deg);
+}
+
+.planets_names {
+  position: absolute;
+  display: block;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.planets_names:hover {
+  color: white;
+}
+
+.moons_names {
+  position: absolute;
+  display: block;
+  font-size: 24px;
+  color: white;
+}
+
+.travel-from-sun__sun {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  transform: translate(-50%, -50%);
+  background-color: yellow;
+  border-radius: 50%;
+}
+
+.travel-from-sun__mercury {
+  width: 1.4px;
+  height: 1.4px;
+  top: 50%;
+  left: 16669px;
+  background-color: rgb(165, 42, 42);
+  border-radius: 50%;
+}
+
+.travel-from-sun__mercury-arrow {
+  left: 25px;
+  top: -2px;
+}
+
+.travel-from-sun__mercury-name {
+  left: 25px;
+  top: 100px;
+  color: brown;
+}
+
+.travel-from-sun__venus {
+  width: 3.48px;
+  height: 3.48px;
+  top: 50%;
+  left: 31145px;
+  background-color: rgb(180, 197, 21);
+  border-radius: 50%;
+}
+
+.travel-from-sun__venus-arrow {
+  left: 25px;
+  top: -2px;
+}
+
+.travel-from-sun__venus-name {
+  left: 25px;
+  top: 100px;
+  color: rgb(180, 197, 21);
+}
+
+.travel-from-sun__earth {
+  width: 3.66px;
+  height: 3.66px;
+  top: 50%;
+  left: 43062px;
+  background-color: rgb(36, 109, 3);
+  border-radius: 50%;
+}
+
+.travel-from-sun__earth-arrow {
+  left: 25px;
+  top: -2px;
+}
+
+.travel-from-sun__earth-name {
+  left: 25px;
+  top: 100px;
+  color: rgb(36, 109, 3);
+}
+
+.travel-from-sun__moon {
+  width: 1px;
+  height: 1px;
+  top: 50%;
+  left: -105px;
+}
+
+.travel-from-sun__moon-arrow {
+  left: -53px;
+  top: -100px;
+  transform: rotate(135deg);
+}
+
+.travel-from-sun__moon-name {
+  left: -120px;
+  top: -130px;
+}
+
+.travel-from-sun__mars {
+  width: 1.95px;
+  height: 1.95px;
+  top: 50%;
+  left: 65601px;
+  background-color: rgb(196, 0, 0);
+  border-radius: 50%;
+}
+
+.travel-from-sun__mars-arrow {
+  left: 25px;
+  top: -2px;
+}
+
+.travel-from-sun__mars-name {
+  left: 25px;
+  top: 100px;
+  color: rgb(196, 0, 0);
+}
+
+.travel-from-sun__jupiter {
+  width: 40.22px;
+  height: 40.22px;
+  top: 50%;
+  left: 224093px;
+  transform: translateY(-50%);
+  background-color: rgb(165, 101, 17);
+  border-radius: 50%;
+}
+
+.travel-from-sun__jupiter-arrow {
+  left: 56px;
+  top: 38px;
+}
+
+.travel-from-sun__jupiter-name {
+  left: 35px;
+  top: 130px;
+  color: rgb(165, 101, 17);
+}
+
+.travel-from-sun__ganymede {
+  width: 1.51px;
+  height: 1.51px;
+  top: 50%;
+  left: -308px;
+}
+
+.travel-from-sun__ganymede-arrow {
+  left: -53px;
+  top: -100px;
+  transform: rotate(135deg);
+}
+
+.travel-from-sun__ganymede-name {
+  left: -125px;
+  top: -130px;
+}
+
+.travel-from-sun__callisto {
+  width: 1.38px;
+  height: 1.38px;
+  top: 50%;
+  left: -541px;
+}
+
+.travel-from-sun__callisto-arrow {
+  left: -53px;
+  top: -100px;
+  transform: rotate(135deg);
+}
+
+.travel-from-sun__callisto-name {
+  left: -125px;
+  top: -130px;
+}
+
+.travel-from-sun__io {
+  width: 1.04px;
+  height: 1.04px;
+  top: 50%;
+  left: -121px;
+}
+
+.travel-from-sun__io-arrow {
+  left: -53px;
+  top: -100px;
+  transform: rotate(135deg);
+}
+
+.travel-from-sun__io-name {
+  left: -100px;
+  top: -130px;
+}
+
+.travel-from-sun__saturn {
+  top: 50%;
+  left: 412622px;
+  transform: translateY(-50%);
+}
+
+.travel-from-sun__saturn-arrow {
+  left: 65px;
+  top: 33px;
+}
+
+.travel-from-sun__saturn-name {
+  left: 35px;
+  top: 135px;
+  color: rgb(255, 203, 124);
+}
+
+.travel-from-sun__titan {
+  width: 1.48px;
+  height: 1.48px;
+  top: 50%;
+  left: -345px;
+}
+
+.travel-from-sun__titan-arrow {
+  left: -53px;
+  top: -100px;
+  transform: rotate(135deg);
+}
+
+.travel-from-sun__titan-name {
+  left: -80px;
+  top: -130px;
+}
+
+.travel-from-sun__uranus {
+  width: 14.7px;
+  height: 14.7px;
+  top: 50%;
+  left: 828059px;
+  background-color: rgb(86, 197, 231);
+  border-radius: 50%;
+}
+
+.travel-from-sun__uranus-arrow {
+  left: 37px;
+  top: 17px;
+}
+
+.travel-from-sun__uranus-name {
+  left: 25px;
+  top: 110px;
+  color: rgb(86, 197, 231);
+}
+
+.travel-from-sun__neptune {
+  width: 14.24px;
+  height: 14.24px;
+  top: 50%;
+  left: 1296328px;
+  transform: translateY(-50%);
+  background-color: rgb(10, 28, 196);
+  border-radius: 50%;
+}
+
+.travel-from-sun__neptune-arrow {
+  left: 35px;
+  top: 15px;
+}
+
+.travel-from-sun__neptune-name {
+  left: 20px;
+  top: 100px;
+  color: rgb(10, 28, 196);
+}
+
+.travel-from-sun__triton {
+  width: 1px;
+  height: 1px;
+  top: 50%;
+  left: -101px;
+}
+
+.travel-from-sun__triton-arrow {
+  left: -53px;
+  top: -100px;
+  transform: rotate(135deg);
+}
+
+.travel-from-sun__triton-name {
+  left: -110px;
+  top: -130px;
+}
+
+.travel-from-sun__pluto {
+  width: 1px;
+  height: 1px;
+  top: 50%;
+  left: 1700165px;
+  background-color: rgb(88, 8, 8);
+  border-radius: 50%;
+}
+
+.travel-from-sun__pluto-arrow {
+  left: 25px;
+  top: -2px;
+}
+
+.travel-from-sun__pluto-name {
+  left: 25px;
+  top: 100px;
+  color: rgb(88, 8, 8);
+}
+
+.fa-chevron-down {
+  font-size: 12px;
+  margin-left: 12px;
+}
+
+.moons {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  font-size: 24px;
+}
+
+.active {
+  display: block;
+}
+
+.hidden {
+  animation: toggleMenuRight 0.5s linear 1 alternate forwards;
+}
+
+.lightspeed {
+  animation: lightSpeedTravel 60000s linear infinite both;
+}
+
+@keyframes goRight1 {
+  0% {
     left: -15%;
-    top: 0;
-    animation: goRight1 2s infinite both ease;
+  }
+
+  40% {
+    left: 40%;
+  }
+
+  60% {
+    left: 40%;
+  }
+
+  100% {
+    left: 115%;
+  }
 }
 
-.welcome-header__button-arrow2{
-    position: absolute;
+@keyframes goRight2 {
+  0% {
     left: -15%;
-    top: 0;
-    animation: goRight2 2s 0.2s infinite both ease;
+  }
+
+  40% {
+    left: 30%;
+  }
+
+  60% {
+    left: 30%;
+  }
+
+  100% {
+    left: 115%;
+  }
 }
 
-.scale{
-    position: absolute;
-    left: 2995px;
-    bottom: 40px;
-    width: 1701300px;
-    height: 28px;
-    background-image: url('img/scale.png');
-    background-repeat: repeat-x;
+@keyframes toggleMenuRight {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(150%);
+  }
 }
 
-.scale-label{
-    position: absolute;
-    left: 2000px;
-    top: 20%;
-    width: 400px;
-    font-size: 40px;
-    color: white;
-    text-align: center;
-    letter-spacing: 3px;
+@keyframes showMenuRight {
+  0% {
+    transform: translateX(150%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
 }
 
-.show-scale{
-    position: absolute;
-    left: 2000px;
-    top: 50%;
-    width: 400px;
-    height: 380px;
-    transform: translateY(-50%);
-    background-image: url('img/scalebefore.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    border-bottom: 2px dashed white;
-    border-top: 2px dashed white;
-}
-
-.distance_label{
-    position: absolute;
-    font-size: 22px;
-    color: white;
-}
-
-.km-100000{
-    top: 57%;
-    left: 10%;
-}
-
-.km-1mln{
-    top: 62%;
-    right: 0;
-}
-
-.menu-right{
-    position: fixed;
-    width: 50px;
-    height: 65vh;
-    top: 50%;
-    right: 15px;
-    transform: translateY(-50%);
-    z-index: 2;
-    text-align: center;
-}
-
-.menu-right__hide{
-    position: absolute;
-    top: -10%;
-    right: 12px;
-    color: white;
-    font-size: 20px;
-    display: none;
-    cursor: pointer;
-}
-
-.menu-right__show{
-    position: absolute;
-    top: -10%;
-    right: 12px;
-    color: white;
-    font-size: 20px;
-    display: none;
-    cursor: pointer;
-}
-
-.nav-right{
-    display: flex;
+@keyframes showSubmenu {
+  0% {
     height: 100%;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #00000d;
-    animation: showMenuRight 0.5s linear 1 alternate forwards;
+  }
+  100% {
+    height: 0%;
+  }
 }
 
-.nav-right__go-to:hover{
-    cursor: pointer;
-    transform: scale(1.25);
-}
-
-.nav-right__lightspeed-btn{
-    position: relative;
-    cursor: pointer;
-}
-
-.nav-right__lightspeed-btn::after{
-    position: absolute;
-    left: -130px;
-    top: 25%;
-    content: 'Prędkość światła';
-    color: transparent;
-    transition: 0.25s;
-}
-
-.nav-right__lightspeed-btn:hover::after{
-    color: white;
-}
-
-.lightbeam{
-    position: absolute;
-    top: 50%;
-    left: 200px;
+@keyframes lightSpeedTravel {
+  0% {
     width: 6px;
-    height: 6px;
-    background-color: #fff;
-    border-radius: 30%;
-    transform: translate(-50%, -50%);
-    border-left: 1px solid #00000d;
-    overflow-x: hidden;
-    cursor: pointer;
-}
-
-.lightbeam:hover{
-    background-color: red;
-}
-
-.lightspeed-msg{
-    position: fixed;
-    left: 50%;
-    top: 10%;
-    transform: translateX(-50%);
-    color: white;
-    font-size: 26px;
-    z-index: 2;
-    display: none;
-}
-
-.travel-from-sun{
-    position: absolute;
-    left: 2800px;
-    top: 0;
-    height: 100%;
-    width: 1701300px;
-}
-
-.travel-from-sun__planet-info{
-    position: absolute;
-    left: 300px;
-    top: 50%;
-    width: 200px;
-    height: 255px;
-    border: 3px solid #ccc;
-    border-radius: 20px;
-    background-color: #031C33;
-    color: white;
-    text-align: justify;
-    padding: 20px 10px;
-    display: none;
-}
-
-.travel-from-sun__planet-info>p{
-    padding: 4px;
-}
-
-.distance-counter{
-    position: fixed;
-    bottom: 15%;
-    left: 50%;
-    width: 100px;
-    height: 60px;
-    transform: translateX(-50%);
-    display: none;
-    z-index: 1;
-    color: #ccc;
-}
-
-.distance-counter:hover{
-    color: white;
-    cursor: pointer;
-}
-
-.distance-counter__traveler{
-    position: absolute;
-    bottom: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.distance-counter__distance{
-    position: absolute; 
-    bottom: 18%;
-    left: 54%;
-    width: 100px;
-    height: 40px;
-    transform: translateX(-50%);
-    font-size: 18px;
-    text-align: center;
-}
-
-.units-choice{
-    position: fixed;
-    bottom: 10.3%;
-    left: 54%;
-    font-size: 14px;
-    color: white;
-    list-style: none;
-    display: none;
-    z-index: 2;
-}
-
-.unit{
-    border: 1px solid white;
-    padding: 0 10px;
-    text-align: center;
-}
-
-.unit:hover{
-    background-color: #11111c;
-    cursor: pointer;
-}
-
-.planet{
-    position: absolute;
-}
-
-.arrows{
-    position: absolute;
-    transform: rotate(-35deg);
-}
-
-.planets_names{
-    position: absolute;
-    display: block;
-    font-size: 50px;
-    cursor: pointer;
-}
-
-.planets_names:hover{
-    color: white;
-}
-
-.moons_names{
-    position: absolute;
-    display: block;
-    font-size: 24px;
-    color: white;
-}
-
-.travel-from-sun__sun{
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 400px;
-    height: 400px;
-    transform: translate(-50%, -50%);
-    background-color: yellow;
-    border-radius: 50%;
-}
-
-.travel-from-sun__mercury{
-    width: 1.4px;
-    height: 1.4px;
-    top: 50%;
-    left: 16669px;
-    background-color: rgb(165, 42, 42);
-    border-radius: 50%;
-}
-
-.travel-from-sun__mercury-arrow{
-    left: 25px;
-    top: -2px;
-}
-
-.travel-from-sun__mercury-name{
-    left: 25px;
-    top: 100px;
-    color: brown;
-}
-
-.travel-from-sun__venus{
-    width: 3.48px;
-    height: 3.48px;
-    top: 50%;
-    left: 31145px;
-    background-color: rgb(180, 197, 21);
-    border-radius: 50%;
-}
-
-.travel-from-sun__venus-arrow{
-    left: 25px;
-    top: -2px;
-}
-
-.travel-from-sun__venus-name{
-    left: 25px;
-    top: 100px;
-    color: rgb(180, 197, 21);
-}
-
-.travel-from-sun__earth{
-    width: 3.66px;
-    height: 3.66px;
-    top: 50%;
-    left: 43062px;
-    background-color: rgb(36, 109, 3);
-    border-radius: 50%;
-}
-
-.travel-from-sun__earth-arrow{
-    left: 25px;
-    top: -2px;
-}
-
-.travel-from-sun__earth-name{
-    left: 25px;
-    top: 100px;
-    color: rgb(36, 109, 3);
-}
-
-.travel-from-sun__moon{
-    width: 1px;
-    height: 1px;
-    top: 50%;
-    left: -105px;
-}
-
-.travel-from-sun__moon-arrow{
-    left: -53px;
-    top: -100px;
-    transform: rotate(135deg);
-}
-
-.travel-from-sun__moon-name{
-    left: -120px;
-    top: -130px;
-}
-
-.travel-from-sun__mars{
-    width: 1.95px;
-    height: 1.95px;
-    top: 50%;
-    left: 65601px;
-    background-color: rgb(196, 0, 0);
-    border-radius: 50%;
-}
-
-.travel-from-sun__mars-arrow{
-    left: 25px;
-    top: -2px;
-}
-
-.travel-from-sun__mars-name{
-    left: 25px;
-    top: 100px;
-    color: rgb(196, 0, 0);
-}
-
-.travel-from-sun__jupiter{
-    width: 40.22px;
-    height: 40.22px;
-    top: 50%;
-    left: 224093px;
-    transform: translateY(-50%);
-    background-color: rgb(165, 101, 17);
-    border-radius: 50%;
-}
-
-.travel-from-sun__jupiter-arrow{
-    left: 56px;
-    top: 38px;
-}
-
-.travel-from-sun__jupiter-name{
-    left: 35px;
-    top: 130px;
-    color: rgb(165, 101, 17);
-}
-
-.travel-from-sun__ganymede{
-    width: 1.51px;
-    height: 1.51px;
-    top: 50%;
-    left: -308px;
-}
-
-.travel-from-sun__ganymede-arrow{
-    left: -53px;
-    top: -100px;
-    transform: rotate(135deg);
-}
-
-.travel-from-sun__ganymede-name{
-    left: -125px;
-    top: -130px;
-}
-
-.travel-from-sun__callisto{
-    width: 1.38px;
-    height: 1.38px;
-    top: 50%;
-    left: -541px;
-}
-
-.travel-from-sun__callisto-arrow{
-    left: -53px;
-    top: -100px;
-    transform: rotate(135deg);
-}
-
-.travel-from-sun__callisto-name{
-    left: -125px;
-    top: -130px;
-}
-
-.travel-from-sun__io{
-    width: 1.04px;
-    height: 1.04px;
-    top: 50%;
-    left: -121px;
-}
-
-.travel-from-sun__io-arrow{
-    left: -53px;
-    top: -100px;
-    transform: rotate(135deg);
-}
-
-.travel-from-sun__io-name{
-    left: -100px;
-    top: -130px;
-}
-
-.travel-from-sun__saturn{
-    top: 50%;
-    left: 412622px;
-    transform: translateY(-50%);
-}
-
-.travel-from-sun__saturn-arrow{
-    left: 65px;
-    top: 33px;
-}
-
-.travel-from-sun__saturn-name{
-    left: 35px;
-    top: 135px;
-    color: rgb(255, 203, 124);
-}
-
-.travel-from-sun__titan{
-    width: 1.48px;
-    height: 1.48px;
-    top: 50%;
-    left: -345px;
-}
-
-.travel-from-sun__titan-arrow{
-    left: -53px;
-    top: -100px;
-    transform: rotate(135deg);
-}
-
-.travel-from-sun__titan-name{
-    left: -80px;
-    top: -130px;
-}
-
-.travel-from-sun__uranus{
-    width: 14.7px;
-    height: 14.7px;
-    top: 50%;
-    left: 828059px;
-    background-color: rgb(86, 197, 231);
-    border-radius: 50%;
-}
-
-.travel-from-sun__uranus-arrow{
-    left: 37px;
-    top: 17px;
-}
-
-.travel-from-sun__uranus-name{
-    left: 25px;
-    top: 110px;
-    color: rgb(86, 197, 231);
-}
-
-.travel-from-sun__neptune{
-    width: 14.24px;
-    height: 14.24px;
-    top: 50%;
-    left: 1296328px;
-    transform: translateY(-50%);
-    background-color: rgb(10, 28, 196);
-    border-radius: 50%;
-}
-
-.travel-from-sun__neptune-arrow{
-    left: 35px;
-    top: 15px;
-}
-
-.travel-from-sun__neptune-name{
-    left: 20px;
-    top: 100px;
-    color: rgb(10, 28, 196);
-}
-
-.travel-from-sun__triton{
-    width: 1px;
-    height: 1px;
-    top: 50%;
-    left: -101px;
-}
-
-.travel-from-sun__triton-arrow{
-    left: -53px;
-    top: -100px;
-    transform: rotate(135deg);
-}
-
-.travel-from-sun__triton-name{
-    left: -110px;
-    top: -130px;
-}
-
-.travel-from-sun__pluto{
-    width: 1px;
-    height: 1px;
-    top: 50%;
-    left: 1700165px;
-    background-color: rgb(88, 8, 8);
-    border-radius: 50%;
-}
-
-.travel-from-sun__pluto-arrow{
-    left: 25px;
-    top: -2px;
-}
-
-.travel-from-sun__pluto-name{
-    left: 25px;
-    top: 100px;
-    color: rgb(88, 8, 8);
-}
-
-.fa-chevron-down{
-    font-size: 12px;
-    margin-left: 12px;
-}
-
-.moons{
-    position: absolute;
-    background-color: #fff;
-    border-radius: 50%;
-    font-size: 24px;
-}
-
-.active{
-    display: block;
-}
-
-.hidden{
-    animation: toggleMenuRight 0.5s linear 1 alternate forwards;
-}
-
-.lightspeed{
-    animation: lightSpeedTravel 60000s linear infinite both;
-}
-
-@keyframes goRight1{
-    0%{
-        left: -15%;
-    }
-
-    40%{
-        left: 40%;
-    }
-
-    60%{
-        left: 40%;
-    }
-
-    100%{
-        left: 115%;
-    }
-}
-
-@keyframes goRight2{
-    0%{
-        left: -15%;
-    }
-
-    40%{
-        left: 30%;
-    }
-
-    60%{
-        left: 30%;
-    }
-
-    100%{
-        left: 115%;
-    }
-}
-
-@keyframes toggleMenuRight{
-    0%{
-        transform: translateX(0%);
-    }
-
-    100%{
-        transform: translateX(150%);
-    }
-}
-
-@keyframes showMenuRight{
-    0%{
-        transform: translateX(150%);
-    }
-
-    100%{
-        transform: translateX(0%);
-    }
-}
-
-@keyframes showSubmenu{
-    0%{
-        height: 100%;
-    }
-    100%{
-        height: 0%;
-    }
-}
-
-@keyframes lightSpeedTravel{
-    0%{
-        width: 6px;
-        transform: translate(0, -50%);
-    }
-
-    100%{
-        width: 4974400px;
-        transform: translate(0, -50%);
-    }
+    transform: translate(0, -50%);
+  }
+
+  100% {
+    width: 4974400px;
+    transform: translate(0, -50%);
+  }
+}
+
+@media (max-width: 1024px) {
+  .mobile-msg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
 }
